@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+    selenium:
+     image: pruebaapk
+     depends_on:
+        - web
+     
+    web:
+     image: s01frontend
+     #build: ./app
+     command: 'npm start'
+     #volumes: 
+      #- ./app:/home/node/app
+     ports:
+      - '3000:3000'
+      
+    
