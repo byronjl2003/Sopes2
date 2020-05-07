@@ -1,0 +1,1 @@
+cmd_/home/usac201222626/github/Sopes2/otro/interceptv2.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000 -T ./scripts/module-common.lds  --build-id  -o /home/usac201222626/github/Sopes2/otro/interceptv2.ko /home/usac201222626/github/Sopes2/otro/interceptv2.o /home/usac201222626/github/Sopes2/otro/interceptv2.mod.o ;  true
