@@ -1,0 +1,1 @@
+cmd_/home/usac201222626/github/Sopes2/lectura/lectura.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000 -T ./scripts/module-common.lds  --build-id  -o /home/usac201222626/github/Sopes2/lectura/lectura.ko /home/usac201222626/github/Sopes2/lectura/lectura.o /home/usac201222626/github/Sopes2/lectura/lectura.mod.o ;  true

@@ -3,7 +3,7 @@
 #include <linux/highmem.h>
  
 //unsigned long *sys_call_table = (unsigned long*) 0xc1538160;
-unsigned long *sys_call_table = (unsigned long*) 0xffffffff81e01600;
+unsigned long *sys_call_table = (unsigned long*) 0xffffffff92e00220;
 asmlinkage int (*real_open)(const char* __user, int, int);
  
 asmlinkage int custom_open(const char* __user file_name, int flags, int mode)

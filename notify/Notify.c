@@ -31,10 +31,11 @@ int main() {
   /*checking for error*/
   if ( fd < 0) {
     perror ("inotify_init");
+    printf("perror???");
   }
     
     /*agregando directorio*/
-  wd = inotify_add_watch(fd, "/home/wxjoy/Desarrollo/SO2/test", IN_DELETE | IN_CREATE | IN_MODIFY);
+  wd = inotify_add_watch(fd, "/", IN_DELETE | IN_CREATE | IN_MODIFY);
     
   while(1){
     /*determina que pasa*/
@@ -81,7 +82,7 @@ int main() {
             fprintf (log, "%s, Se ha modificado el directorio: %s\n", h_evento, event->name);
           } else{
             printf ("%s, se ha modificado el archivo: %s\n", h_evento, event->name);
-            fprintf (log, "%s, se ha borrado modificado el archivo: %s\n", h_evento, event->name);
+            fprintf (log, "%s, se ha modificado el archivo: %s\n", h_evento, event->name);
           }
           printf("%s", ENDC);
         }
